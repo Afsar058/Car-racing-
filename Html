@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next-Level Bike Ride Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Game Menu -->
+  <div id="menu" class="menu">
+    <h1>Bike Ride Game</h1>
+    <p>Welcome to the ultimate bike ride challenge! Jump, dodge, and collect coins to score points.</p>
+    <button onclick="startGame()">Start Game</button>
+    <button onclick="showInstructions()">Instructions</button>
+    <button onclick="showLeaderboard()">Leaderboard</button>
+  </div>
+
+  <!-- Instructions -->
+  <div id="instructions" class="instructions hidden">
+    <h1>How to Play</h1>
+    <ul>
+      <li>Press the <strong>spacebar</strong> to jump.</li>
+      <li>Avoid obstacles and collect coins for extra points.</li>
+      <li>Survive as long as possible to achieve a high score.</li>
+    </ul>
+    <button onclick="goBackToMenu()">Back to Menu</button>
+  </div>
+
+  <!-- Leaderboard -->
+  <div id="leaderboard" class="leaderboard hidden">
+    <h1>Leaderboard</h1>
+    <ol id="leaderboard-list">
+      <!-- Leaderboard scores will be dynamically added here -->
+    </ol>
+    <button onclick="goBackToMenu()">Back to Menu</button>
+  </div>
+
+  <!-- Game Container -->
+  <div id="game" class="game-container hidden">
+    <div class="background" id="background"></div>
+    <div class="bike" id="bike"></div>
+    <div class="obstacle" id="obstacle"></div>
+    <div class="coin" id="coin"></div>
+    <h1 id="score">Score: 0</h1>
+    <h1 id="coins">Coins: 0</h1>
+    <h1 id="level">Level: 1</h1>
+    <button id="restart" class="hidden" onclick="restartGame()">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
